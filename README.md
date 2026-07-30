@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://i.ibb.co/8g7S547H/file-00000000fc5c820eb17eb98f55a140c6.png" alt="PWEB Group Help Bot" width="160" style="border-radius:50%"/>
+<img src="https://i.ibb.co/8g7S547H/file-00000000fc5c820eb17eb98f55a140c6.png" alt="PWEB Group Help Bot" width="480" style="border-radius:50%"/>
 
 **Bot de Telegram completo para administração de grupos — modular, bilíngue e com painel web.**
 
@@ -30,11 +30,11 @@
 
 ## 🤖 O que é o bot
 
-O **PWEB Group Help Bot** é um bot de administração completo para grupos do Telegram. Ele reúne em um único lugar todas as ferramentas que um administrador precisa para manter o grupo organizado,[...]
+O **PWEB Group Help Bot** é um bot de administração completo para grupos do Telegram. Ele reúne em um único lugar todas as ferramentas que um administrador precisa para manter o grupo organiz[...]
 
-Com **28 módulos independentes**, **60+ comandos** e suporte a **português e inglês**, o bot cobre desde ações básicas como ban e mute até proteções automáticas contra flood, spam e raids. T[...]
+Com **28 módulos independentes**, **60+ comandos** e suporte a **português e inglês**, o bot cobre desde ações básicas como ban e mute até proteções automáticas contra flood, spam e raid[...]
 
-Além disso, há um **painel web (WATCHTOWER)** que permite visualizar e gerenciar tudo pelo navegador — banimentos, advertências, notas, estatísticas e grupos — sem precisar digitar comandos no[...]
+Além disso, há um **painel web (WATCHTOWER)** que permite visualizar e gerenciar tudo pelo navegador — banimentos, advertências, notas, estatísticas e grupos — sem precisar digitar comando[...]
 
 ---
 
@@ -345,7 +345,7 @@ Mensagens enviadas enquanto o bot estava offline não são processadas. O bot re
 Sim. Uma única instância do bot pode gerenciar quantos grupos quiser. Cada grupo tem suas configurações independentes.
 
 **O que é uma federação?**  
-Uma federação é um conjunto de grupos vinculados. Um ban federado (`/fban`) remove o usuário de todos os grupos da federação de uma só vez, útil para combater spammers que atuam em múltiplos [...]
+Uma federação é um conjunto de grupos vinculados. Um ban federado (`/fban`) remove o usuário de todos os grupos da federação de uma só vez, útil para combater spammers que atuam em múlti[...]
 
 **O bot suporta português?**  
 Sim. Todas as respostas do bot estão disponíveis em **português (pt_BR)** e **inglês (en_US)**. O idioma é configurável globalmente ou por usuário individualmente.
