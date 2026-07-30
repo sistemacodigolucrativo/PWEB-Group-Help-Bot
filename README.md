@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://i.ibb.co/zhG7Lysx/file-000000003b2c820ea3fc8c2e6e060d88.png" alt="PWEB Group Help Bot" width="160" style="border-radius:50%"/>
+<img src="https://i.ibb.co/8g7S547H/file-00000000fc5c820eb17eb98f55a140c6.png" alt="PWEB Group Help Bot" width="160" style="border-radius:50%"/>
 
 **Bot de Telegram completo para administração de grupos — modular, bilíngue e com painel web.**
 
@@ -32,9 +32,9 @@
 
 O **PWEB Group Help Bot** é um bot de administração completo para grupos do Telegram. Ele reúne em um único lugar todas as ferramentas que um administrador precisa para manter o grupo organizado,[...]
 
-Com **28 módulos independentes**, **60+ comandos** e suporte a **português e inglês**, o bot cobre desde ações básicas como ban e mute até proteções automáticas contra flood, spam e raids. T[...] 
+Com **28 módulos independentes**, **60+ comandos** e suporte a **português e inglês**, o bot cobre desde ações básicas como ban e mute até proteções automáticas contra flood, spam e raids. T[...]
 
-Além disso, há um **painel web (WATCHTOWER)** que permite visualizar e gerenciar tudo pelo navegador — banimentos, advertências, notas, estatísticas e grupos — sem precisar digitar comandos no[...] 
+Além disso, há um **painel web (WATCHTOWER)** que permite visualizar e gerenciar tudo pelo navegador — banimentos, advertências, notas, estatísticas e grupos — sem precisar digitar comandos no[...]
 
 ---
 
@@ -158,7 +158,7 @@ Após adicionado, use `/help` para ver a lista completa de comandos disponíveis
 | `/resetwarn` | Zera todas as advertências | Administrador |
 | `/warns` | Mostra as advertências de um usuário | Todos |
 
-> **Como usar:** responda à mensagem do usu��rio com o comando, ou passe `@usuario` ou o ID como argumento. Exemplo: `/ban @fulano Spam`.
+> **Como usar:** responda à mensagem do usuário com o comando, ou passe `@usuario` ou o ID como argumento. Exemplo: `/ban @fulano Spam`.
 
 ### Configuração do grupo
 
@@ -354,10 +354,10 @@ Sim. Todas as respostas do bot estão disponíveis em **português (pt_BR)** e *
 Se você tiver feito um `/backup` anteriormente, use `/restore` para restaurar. Por isso, é recomendado fazer backup das configurações periodicamente.
 
 **Como o anti-spam funciona?**  
-O módulo AntiSpam verifica cada mensagem contra três critérios: presença na base do CAS (Combot Anti-Spam), quantidade excessiva de links e repetição de mensagens idênticas. Você configura a p[...]
+O módulo AntiSpam verifica cada mensagem contra três critérios: presença na base do CAS (Combot Anti-Spam), quantidade excessiva de links e repetição de mensagens idênticas. Você configur[...]
 
 **O captcha é obrigatório?**  
-Não, é opcional. Quando ativado com `/captcha on`, novos membros precisam completar o desafio configurado antes de poder enviar mensagens. Há três tipos: botão clicável, conta matemática ou tex[...]
+Não, é opcional. Quando ativado com `/captcha on`, novos membros precisam completar o desafio configurado antes de poder enviar mensagens. Há três tipos: botão clicável, conta matemática o[...]
 
 ---
 
