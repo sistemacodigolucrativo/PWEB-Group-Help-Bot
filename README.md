@@ -1,12 +1,19 @@
 <div align="center">
 
-<img src="https://i.ibb.co/8g7S547H/file-00000000fc5c820eb17eb98f55a140c6.png" alt="PWEB Group Help Bot" width="480" style="border-radius:50%"/>
+<img src="https://i.ibb.co/zhG7Lysx/file-000000003b2c820ea3fc8c2e6e060d88.png" alt="PWEB Group Help Bot" width="160" style="border-radius:50%"/>
 
-**Bot de Telegram completo para administração de grupos — modular, bilíngue e com painel web.**
+# PWEB GROUP HELP BOT
+
+**PWEB significa Painel Web. “PWEB Group Help Bot” e “Painel Web Group Help
+Bot” são nomes do mesmo produto único**, formado pelo bot do Telegram, pelo
+Painel Web, pela API e pela camada de dados integrada.
+
+**Plataforma completa para administração de grupos do Telegram — bot modular,
+bilíngue e Painel Web integrado.**
 
 [![Telegram](https://img.shields.io/badge/Plataforma-Telegram-2CA5E0?style=flat-square&logo=telegram&logoColor=white)](https://telegram.org)
-[![Módulos](https://img.shields.io/badge/Módulos-28-EC4899?style=flat-square)]()
-[![Comandos](https://img.shields.io/badge/Comandos-60+-6366F1?style=flat-square)]()
+[![Módulos](https://img.shields.io/badge/Módulos-38-EC4899?style=flat-square)]()
+[![Comandos](https://img.shields.io/badge/Comandos-79-6366F1?style=flat-square)]()
 [![i18n](https://img.shields.io/badge/Idiomas-pt__BR%20%7C%20en__US-10B981?style=flat-square)]()
 [![Licença](https://img.shields.io/badge/Licença-MIT-F59E0B?style=flat-square)](LICENSE)
 
@@ -22,19 +29,25 @@
 4. [Como adicionar ao grupo](#-como-adicionar-ao-grupo)
 5. [Comandos disponíveis](#-comandos-disponíveis)
 6. [Exemplos de uso](#-exemplos-de-uso)
-7. [Painel Web WATCHTOWER](#-painel-web-watchtower)
+7. [Painel Web](#-painel-web)
 8. [Perguntas frequentes](#-perguntas-frequentes)
 9. [Links úteis](#-links-úteis)
 
 ---
 
-## 🤖 O que é o bot
+## 🤖 O que é o PWEB Group Help Bot
 
-O **PWEB Group Help Bot** é um bot de administração completo para grupos do Telegram. Ele reúne em um único lugar todas as ferramentas que um administrador precisa para manter o grupo organiz[...]
+O **PWEB Group Help Bot** é um único produto de administração e operação de
+comunidades no Telegram. O nome PWEB significa **Painel Web**, mas o produto
+não é apenas uma tela web: ele reúne o bot que atua dentro dos grupos e o
+Painel Web que centraliza a operação.
 
-Com **28 módulos independentes**, **60+ comandos** e suporte a **português e inglês**, o bot cobre desde ações básicas como ban e mute até proteções automáticas contra flood, spam e raid[...]
+Com **39 diretórios de módulos**, **81 comandos registrados** e suporte a **português e inglês**, o bot cobre desde ações básicas como ban e mute até proteções automáticas contra flood, spam, CAPTCHA e raids. Todas as configurações ficam salvas por grupo e podem ser ajustadas a qualquer momento pelo menu interativo `/config`.
 
-Além disso, há um **painel web (WATCHTOWER)** que permite visualizar e gerenciar tudo pelo navegador — banimentos, advertências, notas, estatísticas e grupos — sem precisar digitar comando[...]
+O Painel Web React e a API REST em `artifacts/` são partes do mesmo
+PWEB Group Help Bot. Juntos, permitem visualizar e gerenciar bans,
+advertências, notas, estatísticas, grupos e módulos carregados sem depender
+apenas de comandos no Telegram.
 
 ---
 
@@ -45,7 +58,7 @@ Além disso, há um **painel web (WATCHTOWER)** que permite visualizar e gerenci
 | Spam de links e mensagens repetidas | AntiSpam automático com penalidades configuráveis |
 | Entrada em massa de usuários (raids) | AntiRaid detecta pico de entradas e ativa modo de proteção |
 | Flood de mensagens | Flood control com limite de mensagens por janela de tempo |
-| Bots e contas suspeitas entrando | Captcha obrigatório (botão, matemática ou texto) antes de poder falar |
+| Bots e contas suspeitas entrando | CAPTCHA configurável (botão, pergunta e resposta, matemática, chave, regras ou emoji) antes de poder falar |
 | Dificuldade de coordenar múltiplos admins | Painel web centralizado com visão geral em tempo real |
 | Perda de configurações ao trocar de bot | Sistema de backup e restauração das configurações do grupo |
 | Usuários problemáticos em vários grupos | Federações: um ban vale para todos os grupos federados |
@@ -61,7 +74,7 @@ Além disso, há um **painel web (WATCHTOWER)** que permite visualizar e gerenci
 - **Anti-Spam** — detecta e penaliza links excessivos, mensagens repetidas e conteúdo do CAS (Combot Anti-Spam)
 - **Anti-Raid** — identifica pico de entradas e ativa modo raid automaticamente
 - **Flood Control** — define limite de mensagens por janela de tempo; ação configurável (warn / mute / kick / ban)
-- **Captcha** — exige que novos membros completem um desafio antes de poder enviar mensagens (botão clicável, conta matemática ou texto digitado)
+- **Captcha** — exige que novos membros completem um desafio antes de poder enviar mensagens; suporta botão, pergunta e resposta, matemática, chave alfanumérica, aceitação das regras e emoji
 - **Modo Aprovação** — novos membros ficam silenciados até um admin aprovar manualmente a entrada
 
 ### ⚖️ Moderação
@@ -89,7 +102,7 @@ Além disso, há um **painel web (WATCHTOWER)** que permite visualizar e gerenci
 ### 📊 Estatísticas
 
 - `/stats` — total de mensagens e atividade no grupo
-- `/top` — ranking de usuários mais ativos
+- `/top` — leaderboard semanal de XP; use `/top mensagens` para o ranking bruto de mensagens
 
 ### 💾 Backup
 
@@ -107,7 +120,7 @@ O comando `/config` abre um menu com botões inline para ajustar todas as opçõ
 
 ### 🌍 Bilíngue
 
-Todos os 28 módulos têm suporte completo a **pt_BR** e **en_US**. O idioma pode ser definido globalmente ou individualmente por usuário — cada um vê as respostas do bot no seu próprio idioma.
+O projeto mantém cobertura bilíngue ampla em **pt_BR** e **en_US**. Atualmente **36 módulos** possuem par completo `Language/en_US.php` e `Language/pt_BR.php`. O idioma pode ser definido globalmente ou individualmente por usuário — cada um vê as respostas do bot no seu próprio idioma.
 
 ---
 
@@ -130,12 +143,16 @@ Após adicionado, use `/help` para ver a lista completa de comandos disponíveis
 
 ## 💬 Comandos disponíveis
 
+O bot hoje possui **81 comandos registrados**. A lista abaixo reúne os principais comandos operacionais; o catálogo completo pode ser consultado em `/commands`, `/help` e na matriz técnica `CodexDoc/permissoes-contexto-comandos.md`.
+
 ### Comandos gerais
 
 | Comando | O que faz | Quem pode usar |
 |---|---|---|
 | `/start` | Exibe a mensagem de boas-vindas do bot | Todos |
+| `/info` | Exibe informações técnicas e contagens do bot | Todos |
 | `/help` | Lista todos os comandos disponíveis | Todos |
+| `/commands` | Catálogo paginado de comandos por categoria | Todos |
 | `/adminlist` | Exibe a lista de administradores do grupo | Todos |
 
 ### Moderação
@@ -179,7 +196,7 @@ Após adicionado, use `/help` para ver a lista completa de comandos disponíveis
 | `/save <nome> <resposta>` | Salva uma nota com o nome dado | Administrador |
 | `/get <nome>` ou `#nome` | Recupera uma nota salva | Todos |
 | `/notes` | Lista todas as notas salvas | Todos |
-| `/clear <nome>` | Remove uma nota | Administrador |
+| `/clear <quantidade>` ou em resposta | Remove mensagens recentes do chat | Administrador |
 | `/filter <palavra> <resposta>` | Cria um filtro automático | Administrador |
 | `/stop <palavra>` | Remove um filtro | Administrador |
 | `/filters` | Lista os filtros ativos | Todos |
@@ -196,12 +213,24 @@ Após adicionado, use `/help` para ver a lista completa de comandos disponíveis
 | `/setflood <N>` | Define o limite de mensagens antes da ação | Administrador |
 | `/setfloodmode <ação>` | Define a ação do flood (warn/mute/kick/ban) | Administrador |
 | `/flood` | Mostra a configuração atual do flood | Todos |
-| `/captcha on\|off\|button\|math\|text` | Configura o captcha para novos membros | Administrador |
+| `/captcha on\|off\|button\|qa\|math\|key\|rules\|emoji` | Configura o CAPTCHA para novos membros | Administrador |
 | `/antispam on\|off` | Ativa ou desativa o anti-spam | Administrador |
 | `/antiraid on\|off\|<N>` | Configura o modo anti-raid | Administrador |
 | `/approval on\|off` | Ativa o modo de aprovação manual | Administrador |
 | `/approve` | Aprova um membro no modo aprovação | Administrador |
 | `/deny` | Rejeita (bane) um membro no modo aprovação | Administrador |
+
+### Produtividade e suporte
+
+| Comando | O que faz | Quem pode usar |
+|---|---|---|
+| `/msgbuilder` | Abre o assistente de criação de mensagens | Administrador |
+| `/copymsg` | Copia uma mensagem para o Message Builder | Administrador |
+| `/msglist` | Lista templates salvos do Message Builder | Administrador |
+| `/msgload <nome>` | Carrega um template salvo do Message Builder | Administrador |
+| `/msgdelete <nome>` | Remove um template salvo do Message Builder | Administrador |
+| `/sol <texto>` | Salva uma solicitação privada temporária para o desenvolvedor | Owner |
+| `/sollist` | Lista solicitações temporárias pendentes | Owner |
 
 ### Federações
 
@@ -219,7 +248,8 @@ Após adicionado, use `/help` para ver a lista completa de comandos disponíveis
 | Comando | O que faz | Quem pode usar |
 |---|---|---|
 | `/stats` | Estatísticas de mensagens do grupo | Todos |
-| `/top` | Ranking de usuários mais ativos | Todos |
+| `/top [período]` | Leaderboard de XP, semanal por padrão | Todos |
+| `/top mensagens` | Ranking bruto de mensagens | Todos |
 | `/backup` | Exporta as configurações do grupo | Administrador |
 | `/restore` | Restaura configurações a partir de um backup | Administrador |
 | `/restart` | Reinicia o bot | Owner |
@@ -260,9 +290,9 @@ Qualquer membro pode recuperar com `/get regras` ou escrevendo `#regras`.
 ### Configurar captcha obrigatório
 
 ```
-/captcha math
+/captcha emoji
 ```
-Novos membros precisam resolver uma conta simples antes de poder enviar mensagens.
+Novos membros ficam mutados ao entrar e precisam resolver o desafio configurado antes de poder enviar mensagens. Após o acerto, o mute é removido e a mensagem de boas-vindas é enviada.
 
 ### Definir limite de flood
 
@@ -270,7 +300,7 @@ Novos membros precisam resolver uma conta simples antes de poder enviar mensagen
 /setflood 5
 /setfloodmode mute
 ```
-Se alguém enviar mais de 5 mensagens seguidas, será silenciado automaticamente.
+Se alguém enviar mensagens repetidas ou em excesso acima do limite configurado na janela atual, o módulo aplica a ação configurada.
 
 ### Configurar boas-vindas com auto-delete
 
@@ -296,9 +326,12 @@ O usuário é banido em todos os grupos ao mesmo tempo.
 
 ---
 
-## 🖥️ Painel Web WATCHTOWER
+## 🖥️ Painel Web Group Help Bot
 
-O WATCHTOWER é a interface web do bot — um painel que roda localmente junto com o bot e permite gerenciar tudo pelo navegador, sem precisar digitar comandos no Telegram.
+O **Painel Web Group Help Bot** é a interface web do produto PWEB Group Help
+Bot. Ele é servido pelo artifact `artifacts/dashboard`, usa a API REST em
+`artifacts/api-server` e pode rodar junto com o bot no mesmo host. Não se trata
+de um produto separado do bot.
 
 ### O que você encontra no painel
 
@@ -323,7 +356,7 @@ O painel roda no mesmo servidor que o bot. O endereço de acesso depende de onde
 | VPS / Linux | `http://<IP do servidor>:3000` |
 | Windows / macOS (local) | `http://localhost:3000` |
 
-Na tela de login, insira o **token do painel** (`PUBLIC_API_TOKEN`) configurado durante a instalação e clique em **Enter command center**.
+Na tela de login, insira o **token do painel** (`PUBLIC_API_TOKEN`) configurado durante a instalação.
 
 ---
 
@@ -345,7 +378,7 @@ Mensagens enviadas enquanto o bot estava offline não são processadas. O bot re
 Sim. Uma única instância do bot pode gerenciar quantos grupos quiser. Cada grupo tem suas configurações independentes.
 
 **O que é uma federação?**  
-Uma federação é um conjunto de grupos vinculados. Um ban federado (`/fban`) remove o usuário de todos os grupos da federação de uma só vez, útil para combater spammers que atuam em múlti[...]
+Uma federação é um conjunto de grupos vinculados. Um ban federado (`/fban`) remove o usuário de todos os grupos da federação de uma só vez, útil para combater spammers que atuam em múltiplos grupos.
 
 **O bot suporta português?**  
 Sim. Todas as respostas do bot estão disponíveis em **português (pt_BR)** e **inglês (en_US)**. O idioma é configurável globalmente ou por usuário individualmente.
@@ -354,10 +387,10 @@ Sim. Todas as respostas do bot estão disponíveis em **português (pt_BR)** e *
 Se você tiver feito um `/backup` anteriormente, use `/restore` para restaurar. Por isso, é recomendado fazer backup das configurações periodicamente.
 
 **Como o anti-spam funciona?**  
-O módulo AntiSpam verifica cada mensagem contra três critérios: presença na base do CAS (Combot Anti-Spam), quantidade excessiva de links e repetição de mensagens idênticas. Você configur[...]
+O módulo AntiSpam verifica cada mensagem contra CAS, links do Telegram, encaminhamento, citação, repetição e outras regras configuradas. Parte da configuração já foi reconstruída no `/config`, mas ainda coexistem telas novas e legadas dependendo do subtipo.
 
 **O captcha é obrigatório?**  
-Não, é opcional. Quando ativado com `/captcha on`, novos membros precisam completar o desafio configurado antes de poder enviar mensagens. Há três tipos: botão clicável, conta matemática o[...]
+Não, é opcional. Quando ativado com `/captcha on`, novos membros entram mutados e precisam completar o método configurado antes de falar. Os métodos atuais incluem botão, pergunta e resposta, matemática, chave alfanumérica, aceitação das regras e emoji.
 
 ---
 
