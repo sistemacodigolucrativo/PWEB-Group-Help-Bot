@@ -173,7 +173,7 @@ A lista abaixo reúne os principais comandos operacionais. O catálogo completo 
 | `/resetwarn` | Zera todas as advertências | Administrador |
 | `/warns` | Mostra as advertências de um usuário | Todos |
 
-> **Como usar:** responda à mensagem do usuário com o comando, ou passe `@usuario` ou o ID como argumento. Exemplo: `/ban @fulano Spam`.
+> **Como usar:** responda à mensagem do usuário, passe o ID numérico ou use `@usuario` quando o bot já conhece esse usuário no grupo. Exemplo: `/ban @fulano Spam`.
 
 ### Configuração do grupo
 
@@ -362,6 +362,9 @@ Mensagens enviadas enquanto o bot estava offline não são processadas. O bot re
 
 **Posso usar o bot em vários grupos ao mesmo tempo?**  
 Sim. Uma única instância do bot pode gerenciar quantos grupos quiser. Cada grupo tem suas configurações independentes.
+
+**Quando posso usar comandos com @username?**
+Quando o bot já identificou o usuário no grupo. Isso acontece quando a pessoa entra, envia mensagem, clica em botão, é mencionada diretamente ou aparece em eventos de membro do Telegram. Se o usuário nunca foi visto pelo bot, use reply ou ID numérico.
 
 **O que é uma federação?**  
 Uma federação é um conjunto de grupos vinculados. Um ban federado (`/fban`) remove o usuário de todos os grupos da federação de uma só vez, útil para combater spammers que atuam em múltiplos grupos.
