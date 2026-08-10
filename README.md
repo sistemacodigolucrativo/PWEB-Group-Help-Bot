@@ -86,7 +86,7 @@ grupos e recursos ativos sem depender apenas de comandos no Telegram.
 
 - **Notas** — salva respostas prontas acessíveis por `#hashtag` ou `/get`
 - **Regras** — define e exibe as regras do grupo com `/rules`
-- **Boas-vindas e Adeus** — mensagens personalizadas ao entrar e sair; suporta variáveis como nome do usuário
+- **Boas-vindas e Adeus** — mensagens personalizadas ao entrar e sair; boas-vindas suportam texto, foto, áudio, botão URL e variáveis como nome do usuário
 - **Auto-delete** — configura em quanto tempo o bot apaga suas próprias mensagens (0 / 15 / 30 / 60 minutos)
 - **Filtros** — reage automaticamente a palavras ou frases com uma resposta definida pelo admin
 - **Locks** — bloqueia tipos de conteúdo no grupo (fotos, vídeos, links, menções, etc.)
@@ -131,6 +131,7 @@ grupos e recursos ativos sem depender apenas de comandos no Telegram.
 O comando `/config` abre um menu com botões inline para ajustar todas as opções do grupo sem precisar memorizar parâmetros:
 
 - Configurar mensagens de boas-vindas e adeus
+- Adicionar foto, áudio e botão URL na mensagem de boas-vindas
 - Ajustar regras e tempo de auto-delete
 - Configurar Anti-Spam com menus de dois níveis (ação, duração, exceções)
 - Configurar encaminhamento de mensagens de canais, grupos, usuários e bots
