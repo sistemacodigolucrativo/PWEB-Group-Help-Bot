@@ -128,7 +128,7 @@ grupos e recursos ativos sem depender apenas de comandos no Telegram.
 
 ### ⚙️ Configuração interativa
 
-O comando `/config` abre um menu com botões inline para ajustar todas as opções do grupo sem precisar memorizar parâmetros:
+O comando `/config` abre um menu com botões inline para ajustar as opções do grupo sem precisar memorizar parâmetros. Por segurança, o menu e todos os botões inline de configuração só podem ser usados pelo dono/criador do grupo no Telegram:
 
 - Configurar mensagens de boas-vindas e adeus
 - Adicionar foto, áudio e botão URL na mensagem de boas-vindas
@@ -199,7 +199,7 @@ A lista abaixo reúne os principais comandos operacionais. O catálogo completo 
 
 | Comando | O que faz | Quem pode usar |
 |---|---|---|
-| `/config` | Abre o painel de configuração com botões | Administrador |
+| `/config` | Abre o painel de configuração com botões | Dono do grupo |
 | `/setrules <texto>` | Define as regras do grupo | Administrador |
 | `/rules` | Exibe as regras do grupo | Todos |
 | `/clearrules` | Remove as regras | Administrador |
