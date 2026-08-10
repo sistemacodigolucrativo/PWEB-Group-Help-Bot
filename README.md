@@ -101,6 +101,25 @@ grupos e recursos ativos sem depender apenas de comandos no Telegram.
 
 - `/stats` — total de mensagens e atividade no grupo
 - `/top` — leaderboard semanal de XP; use `/top mensagens` para o ranking bruto de mensagens
+- `/rank` — ranking com filtros de período e posição pessoal
+
+### 🎮 Engajamento
+
+- **XP e níveis** — progressão por atividade válida com anti-farm, cooldown e limite diário
+- **Ranking** — Top 10 por período, posição pessoal e snapshots de ranking
+- **Conquistas / Badges** — conquistas plugáveis por evento com desbloqueio idempotente
+- **Streak de atividade** — sequência diária por grupo com timezone configurável
+- **Pergunta do Dia** — pergunta agendada com botões/replies e participação única
+- **Quiz / Trivia** — rodadas com alternativas inline, timeout e pontuação idempotente
+- **Duelo / Desafios** — convite, aceite exclusivo, rodadas, placar e resultado
+- **Reputação Social** — ledger separado de XP, limites anti-fraude e auditoria
+- **Perfil Social** — `/perfil` e `/me` agregam métricas sem duplicar dados
+- **Missões Diárias** — objetivos diários por eventos semânticos, progresso deduplicado e recompensa única
+- **Enquetes Automáticas** — polls nativas do Telegram com scheduler, métricas e lock
+- **Roleta / Sorteio** — sorteios gratuitos com botão participar, participante único, congelamento e auditoria
+- **Aniversários** — cadastro por grupo e lembrete automático idempotente
+- **Match / Amizade** — convite inline com aceite exclusivo e expiração
+- **Estatísticas pessoais** — `/mystats` e `/minhasstats` consolidam métricas oficiais do usuário
 
 ### 💾 Backup
 
@@ -246,6 +265,22 @@ A lista abaixo reúne os principais comandos operacionais. O catálogo completo 
 | `/stats` | Estatísticas de mensagens do grupo | Todos |
 | `/top [período]` | Leaderboard de XP, semanal por padrão | Todos |
 | `/top mensagens` | Ranking bruto de mensagens | Todos |
+| `/rank` | Ranking de engajamento com filtros de período | Todos |
+| `/player` | Perfil de XP, nível e coins | Todos |
+| `/coins` | Mostra carteira global de coins | Todos |
+| `/badges` | Mostra conquistas desbloqueadas | Todos |
+| `/streak` | Mostra sequência diária de atividade | Todos |
+| `/dailyquestion` | Gerencia ou publica Pergunta do Dia | Administrador |
+| `/quiz` | Inicia uma rodada de Quiz / Trivia | Todos |
+| `/duelo` | Cria desafio entre usuários | Todos |
+| `/rep` ou `/reputacao` | Dá ou consulta reputação social | Todos |
+| `/perfil` | Abre Perfil Social com abas inline | Todos |
+| `/missoes` | Mostra Missões Diárias | Todos |
+| `/enquetes` | Configura Enquetes Automáticas | Administrador |
+| `/sorteio` | Cria, consulta ou encerra sorteios gratuitos | Administrador |
+| `/aniversario` | Cadastra, remove ou consulta aniversário | Todos |
+| `/amizade` | Envia convite de amizade por reply ou alvo conhecido | Todos |
+| `/mystats` ou `/minhasstats` | Mostra estatísticas pessoais consolidadas | Todos |
 | `/backup` | Exporta as configurações do grupo | Administrador |
 | `/restore` | Restaura configurações a partir de um backup | Administrador |
 
@@ -295,6 +330,22 @@ Novos membros ficam mutados ao entrar e precisam resolver o desafio configurado 
 /setfloodmode mute
 ```
 Se alguém enviar mensagens repetidas ou em excesso acima do limite configurado na janela atual, o módulo aplica a ação configurada.
+
+### Ver seu progresso no grupo
+
+```
+/perfil
+/rank
+/missoes
+```
+Esses comandos mostram perfil social, posição no ranking e missões diárias sem duplicar mensagens desnecessárias no grupo.
+
+### Criar um sorteio gratuito
+
+```
+/sorteio criar 30m Livro do grupo
+```
+O bot publica um botão de participação, congela os inscritos no encerramento e registra o vencedor para auditoria.
 
 ### Configurar boas-vindas com auto-delete
 
@@ -380,6 +431,9 @@ O módulo AntiSpam verifica mensagens contra CAS, links do Telegram, encaminhame
 
 **O captcha é obrigatório?**  
 Não, é opcional. Quando ativado com `/captcha on`, novos membros entram mutados e precisam completar o método configurado antes de falar. Os métodos atuais incluem botão, pergunta e resposta, matemática, chave alfanumérica, aceitação das regras e emoji.
+
+**Os recursos de engajamento premiam spam?**
+Não. XP, missões e ranking usam atividade válida, cooldown, teto diário e eventos idempotentes para evitar recompensa duplicada ou incentivo a flood.
 
 ---
 
