@@ -252,7 +252,7 @@ A lista abaixo reúne os principais comandos operacionais. O catálogo completo 
 
 | Comando | O que faz | Quem pode usar |
 |---|---|---|
-| `/newfed <nome>` | Cria uma nova federação | Administrador |
+| `/newfed <nome>` | Cria uma nova federação no privado | Usuário em chat privado |
 | `/joinfed <id>` | Adiciona o grupo a uma federação | Administrador |
 | `/leavefed` | Remove o grupo da federação | Administrador |
 | `/fban` | Bane o usuário em todos os grupos da federação | Administrador |
@@ -271,17 +271,19 @@ A lista abaixo reúne os principais comandos operacionais. O catálogo completo 
 | `/coins` | Mostra carteira global de coins | Todos |
 | `/badges` | Mostra conquistas desbloqueadas | Todos |
 | `/streak` | Mostra sequência diária de atividade | Todos |
-| `/dailyquestion` | Gerencia ou publica Pergunta do Dia | Administrador |
+| `/dailyquestion` | Consulta, ativa/desativa ou publica Pergunta do Dia | Todos no grupo (runtime atual) |
 | `/quiz` | Inicia uma rodada de Quiz / Trivia | Todos |
 | `/duelo` | Cria desafio entre usuários | Todos |
 | `/rep` ou `/reputacao` | Dá ou consulta reputação social | Todos |
 | `/perfil` | Abre Perfil Social com abas inline | Todos |
 | `/missoes` | Mostra Missões Diárias | Todos |
-| `/enquetes` | Configura Enquetes Automáticas | Administrador |
-| `/sorteio` | Cria, consulta ou encerra sorteios gratuitos | Administrador |
+| `/enquetes` | Consulta Enquetes Automáticas; admins ativam/desativam ou publicam | Todos para status; admin para alterar/postar |
+| `/sorteio` | Consulta Sorteios; admins criam, ativam/desativam ou encerram | Todos para status; admin para alterar/criar/encerrar |
 | `/aniversario` | Cadastra, remove ou consulta aniversário | Todos |
 | `/amizade` | Envia convite de amizade por reply ou alvo conhecido | Todos |
 | `/mystats` ou `/minhasstats` | Mostra estatísticas pessoais consolidadas | Todos |
+| `/play <consulta>` | Pesquisa e envia áudio com seleção inline | Todos |
+| `/playvideo <consulta>` | Pesquisa e envia vídeo com seleção inline | Todos |
 | `/backup` | Exporta as configurações do grupo | Administrador |
 | `/restore` | Restaura configurações a partir de um backup | Administrador |
 
@@ -390,6 +392,8 @@ sem tratar o painel como um produto separado do bot.
 | **Estatísticas** | Gráficos de mensagens e ranking de usuários ativos |
 | **FedBans** | Bans de federação ativos |
 | **Recursos** | Proteções e recursos ativos no bot |
+| **Planos comerciais** | Planos ativos e configuração administrativa de ofertas |
+| **Atualizações do Bot** | Histórico público de novidades do produto |
 
 ### Como acessar
 
@@ -407,7 +411,7 @@ Não. O bot é projetado exclusivamente para grupos do Telegram. Canais têm uma
 Sim — o bot precisa estar em execução contínua em algum servidor ou dispositivo. Para uso em produção, recomenda-se manter o bot em uma infraestrutura estável.
 
 **O bot salva histórico de mensagens?**  
-Não. O bot salva apenas dados operacionais: bans, mutes, warns, notas, configurações e estatísticas de contagem de mensagens. O conteúdo das mensagens não é armazenado.
+O bot não salva histórico bruto de conversa. Ele salva dados operacionais e conteúdos configurados pelo próprio grupo, como bans, mutes, warns, notas, regras, filtros, templates de mensagens, configurações e estatísticas de contagem.
 
 **O que acontece se o bot ficar offline por um tempo?**  
 Mensagens enviadas enquanto o bot estava offline não são processadas. O bot retoma normalmente quando volta a ficar online.
