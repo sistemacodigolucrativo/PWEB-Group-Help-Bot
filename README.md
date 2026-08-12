@@ -126,6 +126,11 @@ grupos e recursos ativos sem depender apenas de comandos no Telegram.
 - `/backup` — exporta as configurações do grupo para um arquivo
 - `/restore` — restaura configurações a partir de um backup anterior
 
+### 🎵 Mídia
+
+- `/play` e `/playvideo` — pesquisam e enviam áudio/vídeo no chat com seleção inline
+- `/live` — recurso opcional para tocar músicas na chamada de voz do grupo via worker isolado
+
 ### ⚙️ Configuração interativa
 
 O comando `/config` abre um menu com botões inline para ajustar as opções do grupo sem precisar memorizar parâmetros. Por segurança, o menu e todos os botões inline de configuração só podem ser usados pelo dono/criador do grupo no Telegram:
@@ -284,6 +289,12 @@ A lista abaixo reúne os principais comandos operacionais. O catálogo completo 
 | `/mystats` ou `/minhasstats` | Mostra estatísticas pessoais consolidadas | Todos |
 | `/play <consulta>` | Pesquisa e envia áudio com seleção inline | Todos |
 | `/playvideo <consulta>` | Pesquisa e envia vídeo com seleção inline | Todos |
+| `/live <consulta>` | Pesquisa e toca música na chamada de voz via worker Live opcional | Todos |
+| `/queue` | Mostra a fila do Live no grupo | Todos |
+| `/pause` / `/resume` / `/skip` | Controla a reprodução ao vivo | Moderador |
+| `/seek <segundos>` / `/seekback <segundos>` | Avança ou retrocede a faixa ao vivo | Moderador |
+| `/loop <1-10\|off>` | Ajusta repetição da faixa atual | Moderador |
+| `/livestop` | Encerra a reprodução ao vivo | Moderador |
 | `/backup` | Exporta as configurações do grupo | Administrador |
 | `/restore` | Restaura configurações a partir de um backup | Administrador |
 
