@@ -15,6 +15,7 @@ Start here:
 - [Runtime modules](documentation/reference/modules.md)
 - [Registered commands](documentation/reference/commands.md)
 - [Configuration guide](documentation/bot/configuration.md)
+- [Telegram Mini App](documentation/operations/telegram-mini-app.md)
 - [Testing](documentation/development/testing.md)
 
 ## Current Runtime Summary
