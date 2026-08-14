@@ -205,12 +205,10 @@ A lista abaixo reúne os principais comandos operacionais. O catálogo completo 
 | Comando | O que faz | Quem pode usar |
 |---|---|---|
 | `/config` | Abre o painel de configuração com botões | Dono do grupo |
-| `/setrules <texto>` | Define as regras do grupo | Administrador |
+| `/config` → Regras | Define ou remove as regras do grupo | Administrador |
 | `/rules` | Exibe as regras do grupo | Todos |
-| `/clearrules` | Remove as regras | Administrador |
-| `/welcome on\|off\|msg` | Ativa, desativa ou define a mensagem de boas-vindas | Administrador |
-| `/goodbye on\|off\|msg` | Ativa, desativa ou define a mensagem de saída | Administrador |
-| `/cleanwelcome on\|off` | Apaga automaticamente a mensagem de boas-vindas anterior | Administrador |
+| `/config` → Boas-vindas | Configura boas-vindas, prévia, mídia, botão e limpeza da mensagem anterior | Administrador |
+| `/config` → Adeus | Configura mensagem de saída, mídia, envio privado e limpeza da mensagem anterior | Administrador |
 
 ### Organização
 
@@ -220,11 +218,9 @@ A lista abaixo reúne os principais comandos operacionais. O catálogo completo 
 | `/get <nome>` ou `#nome` | Recupera uma nota salva | Todos |
 | `/notes` | Lista todas as notas salvas | Todos |
 | `/clear <quantidade>` ou em resposta | Remove mensagens recentes do chat | Administrador |
-| `/filter <palavra> <resposta>` | Cria um filtro automático | Administrador |
-| `/stop <palavra>` | Remove um filtro | Administrador |
+| `/config` → Filtros | Cria ou remove filtros automáticos | Administrador |
 | `/filters` | Lista os filtros ativos | Todos |
-| `/lock <tipo>` | Bloqueia um tipo de conteúdo | Administrador |
-| `/unlock <tipo\|all>` | Desbloqueia conteúdo | Administrador |
+| `/config` → Bloquear / Mídias | Configura bloqueios de tipos de conteúdo | Administrador |
 | `/locks` | Lista os bloqueios ativos | Todos |
 | `/report` | Reporta uma mensagem aos admins | Todos |
 | `/pin` / `/unpin` | Fixa ou desfixta mensagem | Administrador |
@@ -233,13 +229,12 @@ A lista abaixo reúne os principais comandos operacionais. O catálogo completo 
 
 | Comando | O que faz | Quem pode usar |
 |---|---|---|
-| `/setflood <N>` | Define o limite de mensagens antes da ação | Administrador |
-| `/setfloodmode <ação>` | Define a ação do flood (warn/mute/kick/ban) | Administrador |
+| `/config` → Proteção → Anti-flood | Define limite, janela, ação, deleção e penalidade do flood | Administrador |
 | `/flood` | Mostra a configuração atual do flood | Todos |
-| `/captcha on\|off\|button\|qa\|math\|key\|rules\|emoji` | Configura o CAPTCHA para novos membros | Administrador |
-| `/antispam on\|off` | Ativa ou desativa o anti-spam | Administrador |
-| `/antiraid on\|off\|<N>` | Configura o modo anti-raid | Administrador |
-| `/approval on\|off` | Ativa o modo de aprovação manual | Administrador |
+| `/config` → Proteção → Entradas → Captcha | Configura modo, método, timeout e tentativas do CAPTCHA | Administrador |
+| `/config` → Proteção → Anti-spam | Configura o anti-spam | Administrador |
+| `/config` → Proteção → AntiRaid | Configura o modo anti-raid | Administrador |
+| `/config` → Proteção → Entradas → Aprovação | Configura o modo de aprovação manual e escopo de aprovadores | Administrador |
 | `/approve` | Aprova um membro no modo aprovação | Administrador |
 | `/deny` | Rejeita (bane) um membro no modo aprovação | Administrador |
 
@@ -258,8 +253,7 @@ A lista abaixo reúne os principais comandos operacionais. O catálogo completo 
 | Comando | O que faz | Quem pode usar |
 |---|---|---|
 | `/newfed <nome>` | Cria uma nova federação no privado | Usuário em chat privado |
-| `/joinfed <id>` | Adiciona o grupo a uma federação | Administrador |
-| `/leavefed` | Remove o grupo da federação | Administrador |
+| `/config` → Federação | Vincula ou remove o grupo de uma federação | Administrador |
 | `/fban` | Bane o usuário em todos os grupos da federação | Administrador |
 | `/unfban` | Remove o ban federado | Administrador |
 | `/fedinfo` | Exibe informações da federação | Todos |
@@ -318,10 +312,7 @@ O usuário é banido e uma notificação é enviada no grupo.
 
 ### Criar um filtro automático
 
-```
-/filter link http://exemplo.com Não envie links externos.
-```
-A partir de agora, sempre que alguém enviar "link", o bot responde automaticamente com a mensagem definida.
+Use `/config` → Filtros para adicionar a palavra e a resposta. A partir de então, sempre que alguém enviar a palavra configurada, o bot responde automaticamente com a mensagem definida.
 
 ### Salvar e recuperar uma nota
 
@@ -332,17 +323,14 @@ Qualquer membro pode recuperar com `/get regras` ou escrevendo `#regras`.
 
 ### Configurar captcha obrigatório
 
-```
-/captcha emoji
-```
+Use `/config` → Proteção → Entradas → Captcha para escolher o modo de entrada e o método do desafio.
+
 Novos membros ficam mutados ao entrar e precisam resolver o desafio configurado antes de poder enviar mensagens. Após o acerto, o mute é removido e a mensagem de boas-vindas é enviada.
 
 ### Definir limite de flood
 
-```
-/setflood 5
-/setfloodmode mute
-```
+Use `/config` → Proteção → Anti-flood para definir o limite, a janela e a ação aplicada.
+
 Se alguém enviar mensagens repetidas ou em excesso acima do limite configurado na janela atual, o módulo aplica a ação configurada.
 
 ### Ver seu progresso no grupo
@@ -363,7 +351,7 @@ O bot publica um botão de participação, congela os inscritos no encerramento 
 
 ### Configurar boas-vindas com auto-delete
 
-1. Use `/welcome msg Bem-vindo ao grupo, {first_name}!` para definir a mensagem
+1. Acesse `/config → Boas-vindas → Personalizar mensagem → Texto` e envie a mensagem
 2. Acesse `/config → Boas-vindas → ⏰ Exibição → 15 min`
 
 A mensagem será apagada automaticamente após 15 minutos.
@@ -374,9 +362,7 @@ A mensagem será apagada automaticamente após 15 minutos.
 /newfed MeusBots
 ```
 No segundo grupo:
-```
-/joinfed <ID da federação>
-```
+use `/config` → Federação e informe o ID da federação.
 Agora, em qualquer grupo da federação:
 ```
 /fban @spammer
@@ -446,7 +432,7 @@ Se você tiver feito um `/backup` anteriormente, use `/restore` para restaurar. 
 O módulo AntiSpam verifica mensagens contra CAS, links do Telegram, encaminhamento, citação, repetição e outras regras configuradas pelo administrador no `/config`.
 
 **O captcha é obrigatório?**  
-Não, é opcional. Quando ativado com `/captcha on`, novos membros entram mutados e precisam completar o método configurado antes de falar. Os métodos atuais incluem botão, pergunta e resposta, matemática, chave alfanumérica, aceitação das regras e emoji.
+Não, é opcional. Quando ativado em `/config` → Proteção → Entradas → Captcha, novos membros entram mutados e precisam completar o método configurado antes de falar. Os métodos atuais incluem botão, pergunta e resposta, matemática, chave alfanumérica, aceitação das regras e emoji.
 
 **Os recursos de engajamento premiam spam?**
 Não. XP, missões e ranking usam atividade válida, cooldown, teto diário e eventos idempotentes para evitar recompensa duplicada ou incentivo a flood.
